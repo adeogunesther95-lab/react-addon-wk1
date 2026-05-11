@@ -8,8 +8,8 @@ export default function Results(props) {
 
     return (
       <div className="Results">
-        <h2>{props.results.word}</h2>
-        <div>
+        <section>
+          <h2>{props.results.word}</h2>
           <p>
             {props.results.phonetic}
             {props.results.phonetics &&
@@ -25,14 +25,15 @@ export default function Results(props) {
                 </button>
               )}
           </p>
-          {props.results.meanings.map(function (meaning, index) {
-            return (
-              <div key={index}>
-                <Meaning meaning={meaning} />
-              </div>
-            );
-          })}
-        </div>
+        </section>
+
+        {props.results.meanings.map(function (meaning, index) {
+          return (
+            <section key={index}>
+              <Meaning meaning={meaning} />
+            </section>
+          );
+        })}
       </div>
     );
   } else {

@@ -21,7 +21,9 @@ export default function Meaning(props) {
           </div>
         );
       })}
-      <Synonyms synonyms={props.meaning.synonyms} />
+      <section>
+        <Synonyms synonyms={props.meaning.synonyms} />
+      </section>
     </div>
   );
 }

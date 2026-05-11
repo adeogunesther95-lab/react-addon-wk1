@@ -24,15 +24,19 @@ export default function Dictionary() {
   return (
     <div className="Dictionary">
       <h1>Dictionary App</h1>
-
-      <form onSubmit={search}>
-        <input
-          type="search"
-          placeholder="Type a word..."
-          autoFocus="true"
-          onChange={handleWordSearch}
-        />
-      </form>
+      <section>
+        <form onSubmit={search}>
+          <input
+            type="search"
+            placeholder="Type a word..."
+            autoFocus="true"
+            onChange={handleWordSearch}
+          />
+        </form>
+        <div className="hint">
+          suggested words: sunset, wine, yoga, plant, music...
+        </div>
+      </section>
       <Results results={results} />
     </div>
   );

@@ -10,3 +10,34 @@ h1 {
   font-weight: bold;
   margin-bottom: 30px;
 }
+section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
+.Dictionary input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.Dictionary button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #137d6c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Dictionary button:hover {
+  background-color: #0f6654;
+}
+.Dictionary .hint {
+  color: #888;
+  font-size: 14px;
+  margin-top: 10px;
+}
