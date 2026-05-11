@@ -18,10 +18,12 @@ export default function Meaning(props) {
           </div>
         );
       })}
-      <p>
-        <strong>Synonyms: </strong>
-        {props.meaning.synonyms.join(", ")}
-      </p>
+      {props.meaning.synonyms && props.meaning.synonyms.length > 0 && (
+        <p>
+          <strong>Synonyms: </strong>
+          {props.meaning.synonyms.join(", ")}
+        </p>
+      )}
     </div>
   );
 }
