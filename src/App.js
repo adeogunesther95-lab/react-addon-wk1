@@ -20,6 +20,8 @@ export default function App() {
         <main>
           <Dictionary />
         </main>
+        <br />
+        <hr />
         <footer className="App-footer">
           <a
             className="App-link"
@@ -27,7 +29,10 @@ export default function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <small>Created by Esther Adeogun</small>
+            <strong>
+              {" "}
+              <small>Created by Esther Adeogun</small>{" "}
+            </strong>
           </a>
         </footer>
       </div>
