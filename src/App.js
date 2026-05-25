@@ -23,37 +23,37 @@ export default function App() {
         <br />
         <hr />
         <footer className="App-footer">
-          <a
-            className="App-link"
-            href="https://www.linkedin.com/in/esther-adeogun-0b9118125/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <strong>
+          <small>
+            Created by
+            <a
+              className="App-link"
+              href="https://www.linkedin.com/in/esther-adeogun-0b9118125/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong> Esther Adeogun</strong>
+            </a>
+            , open-sourced on
+            <a
+              className="App-link"
+              href="https://github.com/adeogunesther95-lab/react-addon-wk1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {" "}
-              <small>
-                Created by Esther Adeogun, open-sourced on
-                <a
-                  className="App-link"
-                  href="https://github.com/adeogunesther95-lab/react-addon-wk1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </a>
-                and hosted on
-                <a
-                  className="App-link"
-                  href="https://ea-dictionary-app.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {" "}
-                  Netlify
-                </a>
-              </small>{" "}
-            </strong>
-          </a>
+              <strong>GitHub</strong>{" "}
+            </a>
+            and hosted on
+            <a
+              className="App-link"
+              href="https://ea-dictionary-app.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              <strong>Netlify</strong>
+            </a>
+          </small>
         </footer>
       </div>
     </div>
