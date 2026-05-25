@@ -8,9 +8,11 @@ export default function Dictionary() {
   const [word, setWord] = useState("");
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
+  const [error, setError] = useState(null);
 
   function handleResponse(response) {
     setResults(response.data[0]);
+    setError(null);
   }
 
   function handleImageResponse(response) {
@@ -18,15 +20,26 @@ export default function Dictionary() {
     setPhotos(response.data.photos);
   }
 
+  function handleError(err) {
+    setError("Word not found. Please try another word.");
+    setResults(null);
+    setPhotos(null);
+  }
+
   function search(event) {
     event.preventDefault();
 
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse).catch(handleError);
 
     let imgApiKey = "bf602aabco34t729377499af62121a7a";
     let imgApiUrl = `https://api.shecodes.io/images/v1/search?query=${word}&key=${imgApiKey}`;
-    axios.get(imgApiUrl).then(handleImageResponse);
+    axios
+      .get(imgApiUrl)
+      .then(handleImageResponse)
+      .catch(() => {
+        // Images API error won't break the app
+      });
   }
   function handleWordSearch(event) {
     setWord(event.target.value);
@@ -47,8 +60,13 @@ export default function Dictionary() {
           suggested words: sunset, wine, yoga, plant, music...
         </div>
       </section>
-      <Results results={results} />
-      <Images photos={photos} />
+      {error && <div className="error-message">{error}</div>}
+      {results && (
+        <div className="word-search">
+          <Results results={results} />
+          <Images photos={photos} />
+        </div>
+      )}
     </div>
   );
 }
