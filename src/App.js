@@ -31,7 +31,27 @@ export default function App() {
           >
             <strong>
               {" "}
-              <small>Created by Esther Adeogun</small>{" "}
+              <small>
+                Created by Esther Adeogun, open-sourced on
+                <a
+                  className="App-link"
+                  href="https://github.com/adeogunesther95-lab/react-addon-wk1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+                and hosted on
+                <a
+                  className="App-link"
+                  href="https://ea-dictionary-app.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {" "}
+                  Netlify
+                </a>
+              </small>{" "}
             </strong>
           </a>
         </footer>
